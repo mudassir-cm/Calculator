@@ -1,10 +1,12 @@
 import style from "./Button.module.css";
 // import style from "../App.module.css";
 
-const Button = ({ btn }) => {
+const Button = ({ btn, onButtonClick }) => {
   return (
     <>
-      <button className={style.button}>{btn}</button>
+      <button className={style.button} onClick={() => onButtonClick(btn)}>
+        {btn}
+      </button>
     </>
   );
 };

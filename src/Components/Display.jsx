@@ -1,8 +1,8 @@
 import style from "./Display.module.css";
-const Display = () => {
+const Display = ({ display }) => {
   return (
     <>
-      <input className={style.display} type="text" />
+      <input className={style.display} type="text" value={display} readOnly />
     </>
   );
 };

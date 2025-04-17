@@ -2,7 +2,7 @@ import Button from "./Button";
 import style from "./ButtonContainer.module.css";
 // import style from "../App.module.css";
 
-const ButtonContainer = () => {
+const ButtonContainer = ({ onButtonClick }) => {
   const btnData = [
     "1",
     "2",
@@ -20,13 +20,14 @@ const ButtonContainer = () => {
     "/",
     "=",
     ".",
+    "c",
   ];
 
   return (
     <>
       <div className={style.btnContainer}>
         {btnData.map((btn) => (
-          <Button btn={btn}></Button>
+          <Button btn={btn} onButtonClick={onButtonClick}></Button>
         ))}
       </div>
     </>
